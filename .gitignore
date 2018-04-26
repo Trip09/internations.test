@@ -1,0 +1,10 @@
+# Git ignore
+*.swp
+*.swo
+*.bak
+nbproject/*
+.buildpath
+.project
+.settings/
+.idea/
+
