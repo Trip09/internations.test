@@ -1,5 +1,7 @@
 imports:
     - { resource: config_dev.yml }
+    - { resource: parameters/parameters_test.yml }
+    - { resource: bundles/monolog_dev.yaml }
 
 framework:
     test: ~
@@ -12,5 +14,3 @@ web_profiler:
     toolbar: false
     intercept_redirects: false
 
-swiftmailer:
-    disable_delivery: true

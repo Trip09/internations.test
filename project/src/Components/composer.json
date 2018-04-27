@@ -1,0 +1,26 @@
+{
+    "name": "iyp/sf-bootstrap",
+    "license": "Proprietary",
+    "type": "project",
+    "description": "Set of Classes to use in Projects",
+    "require": {
+        "php": ">=7.1.0",
+        "doctrine/dbal": "^2.5",
+
+        "guzzlehttp/guzzle": "^6.2",
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.2",
+        "phpspec/phpspec": "^2.2",
+        "phpspec/nyan-formatters": "^1.0"
+    },
+    "scripts": {
+    },
+    "config": {
+        "platform": {
+            "php": "7.1"
+        }
+    },
+    "extra": {
+    }
+}

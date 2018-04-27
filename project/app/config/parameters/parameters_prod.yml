@@ -1,0 +1,14 @@
+parameters:
+  # Database
+  database_driver:            pdo_mysql
+  database_host:              mysql.internations.com
+  database_name:              test_app
+  database_user:              test_app_u
+  database_password:          "Thisad1823Lfdsamewr9jkAQ2q3452OB"
+
+
+  # The code of the default language used by the application ('en' = English)
+  locale: en
+
+  # see: http://symfony.com/doc/current/reference/configuration/framework.html#secret
+  secret: 'EXyBaasDwqdwqq$HYtyg1jO&%$La9y#7N$QWT4u92otnEq4&R@sv7FhgHOu'

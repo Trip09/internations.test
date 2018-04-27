@@ -1,0 +1,12 @@
+# Swiftmailer Configuration
+swiftmailer:
+  default_mailer: "mailgun_spool"
+  mailers:
+    mailgun_spool:
+      transport:      "%mailgun_spool_transport%"
+      username:       "%mailgun_spool_user%"
+      password:       "%mailgun_spool_password%"
+      host:           "%mailgun_spool_host%"
+      port:           "%mailgun_spool_port%"
+      sender_address: "%mailgun_spool_sender%"
+      spool: { type: memory }

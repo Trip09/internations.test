@@ -1,0 +1,35 @@
+{% for object in admin.datagrid.results %}
+    <tr>
+        {% include admin.getTemplate('inner_list_row') %}
+        <td>
+            <div class="form-actions">
+                {% if admin.hasRoute('move') %}
+                    <i class="sortable-object fa fa-arrows"></i>
+                {% endif %}
+                {% if admin.hasRoute('edit') %}
+                    <a class="btn btn-success btn-sm" href="{{ admin.generateObjectUrl('edit', object) }}">
+                        <i class="fa fa-edit"></i>
+                        {{ 'action_edit'|trans({}, 'messages') }}
+                    </a>
+                {% endif %}
+                {% if admin.hasRoute('delete')  %}
+                    <a href="{{ admin.generateObjectUrl('delete', object) }}"
+                       class="btn btn-danger btn-sm"
+                       title="{{ 'action_delete'|trans({}, 'messages') }}"
+                            >
+                        <i class="fa fa-minus-circle"></i>
+                        {{ 'action_delete'|trans({}, 'messages') }}
+                    </a>
+                {% endif %}{% if admin.hasRoute('show')  %}
+                    <a href="{{ admin.generateObjectUrl('show', object) }}"
+                       class="btn btn-info btn-sm"
+                       title="{{ 'action_show'|trans({}, 'messages') }}"
+                            >
+                        <i class="fa fa-eye"></i>
+                        {{ 'action_show'|trans({}, 'messages') }}
+                    </a>
+                {% endif %}
+            </div>
+        </td>
+    </tr>
+{% endfor %}

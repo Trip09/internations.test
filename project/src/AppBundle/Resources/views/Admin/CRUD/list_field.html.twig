@@ -1,0 +1,21 @@
+{% extends 'SonataAdminBundle:CRUD:base_list_field.html.twig' %}
+
+{% block field %}
+    {% spaceless %}
+        {% if field_description.options.collapse is defined %}
+            {% set collapse = field_description.options.collapse %}
+            <div class="sonata-readmore"
+                 data-readmore-height="{{ collapse.height|default(40) }}"
+                 data-readmore-more="{{ collapse.more|default('read_more')|trans({}, 'SonataAdminBundle') }}"
+                 data-readmore-less="{{ collapse.less|default('read_less')|trans({}, 'SonataAdminBundle') }}">{{ value }}</div>
+        {% elseif value is iterable %}
+            <ul>
+                {% for item in value %}
+                    <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            {{ value }}
+        {% endif %}
+    {% endspaceless %}
+{% endblock %}

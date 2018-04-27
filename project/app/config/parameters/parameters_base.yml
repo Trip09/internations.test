@@ -1,0 +1,21 @@
+parameters:
+  # Database
+  database_driver:            pdo_mysql
+  database_host:              iyp.mysql
+  database_name:              internations_test
+  database_user:              root
+  database_password:          null
+
+  # The code of the default language used by the application ('en' = English)
+  locale: en
+
+  # see: http://symfony.com/doc/current/reference/configuration/framework.html#secret
+  secret: 'change-this'
+
+  mailer_user: test@intenations.org
+  mailgun_spool_transport:
+  mailgun_spool_user:
+  mailgun_spool_password:
+  mailgun_spool_host:
+  mailgun_spool_port:
+  mailgun_spool_sender:

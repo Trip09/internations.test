@@ -1,0 +1,24 @@
+UserBundle\Model\User:
+  table: users
+  type:  entity
+  changeTrackingPolicy: DEFERRED_EXPLICIT
+  repositoryClass: UserBundle\Repository\UserDoctrine
+
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+
+  manyToMany:
+    groups:
+      targetEntity: UserBundle\Model\Group
+      joinTable:
+        name: user_group_relation
+        joinColumns:
+          user_id:
+            referencedColumnName: id
+        inverseJoinColumns:
+          group_id:
+            referencedColumnName: id
+      indexBy: ["user_id"]

@@ -1,0 +1,14 @@
+homepage:
+  path: /
+  defaults:
+      _controller: FrameworkBundle:Redirect:redirect
+      route: sonata_admin_dashboard
+      permanent: true # this is for 301
+
+admin:
+  prefix: /admin
+  resource: admin.yml
+
+api:
+  prefix: /api
+  resource: api.yml

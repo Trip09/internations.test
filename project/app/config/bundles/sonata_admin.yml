@@ -1,0 +1,15 @@
+sonata_admin:
+  title: 'InterNations Test'
+  title_logo: 'https://www.internations.org/static/bundles/internationshomepage/frontend/images/colorlogo-br02.svg'
+
+  # set to true to persist filter settings per admin module in the user's session
+  persist_filters: true
+
+  options:
+    html5_validate: false # does not use html5 validation
+    pager_links: 5 # pager max links to display
+    use_icheck: true
+
+  templates:
+    layout:               AppBundle:Admin:layout.html.twig
+    outer_list_rows_list: AppBundle:Admin/CRUD:list_outer_rows_list.html.twig

@@ -1,0 +1,10 @@
+UserBundle\Model\Group:
+  table: users_group
+  type:  entity
+  changeTrackingPolicy: DEFERRED_EXPLICIT
+
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO

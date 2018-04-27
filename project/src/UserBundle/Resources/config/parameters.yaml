@@ -1,0 +1,3 @@
+parameters:
+  sonata.user.admin.user.entity:   'UserBundle\Model\User'
+  sonata.user.admin.group.entity:  'UserBundle\Model\Group'

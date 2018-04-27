@@ -1,0 +1,10 @@
+sonata_user:
+  security_acl: false
+  manager_type: orm      # can be orm or mongodb
+
+  class:                  # Entity Classes
+    user:               UserBundle\Model\User
+    group:              UserBundle\Model\Group
+
+  table:
+    user_group:           user_group_relation

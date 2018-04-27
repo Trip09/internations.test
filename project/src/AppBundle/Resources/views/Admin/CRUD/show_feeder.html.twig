@@ -1,0 +1,40 @@
+{% extends 'SonataAdminBundle:CRUD:show.html.twig' %}
+
+{% block show %}
+    <div class="sonata-ba-view">
+        <div class="panel-group" id="accordion">
+            {% for item in feeder %}
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse-{{ loop.index }}">
+                                {{ item.title }}
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse-{{ loop.index }}" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <p>
+                                <a href="{{ item.link }}" target="_blank">
+                                    Content in: {{ item.link }}
+                                </a>
+                            </p>
+                            --
+                            <p>
+                                {{ item.description |raw }}
+                            </p>
+                            <p>
+                                <a href="{{ item.link }}" target="_blank">
+                                    Read more
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            {% else %}
+                <h2>Results not available on:</h2>
+                <h4>{{ object.getRssUrl }}</h4>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
