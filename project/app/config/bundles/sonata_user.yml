@@ -6,5 +6,9 @@ sonata_user:
     user:               UserBundle\Model\User
     group:              UserBundle\Model\Group
 
+  admin:
+    group:
+      controller:       UserBundle:Admin\Group
+
   table:
-    user_group:           user_group_relation
+    user_group:         user_group_relation

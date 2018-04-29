@@ -2,9 +2,15 @@ UserBundle\Model\Group:
   table: users_group
   type:  entity
   changeTrackingPolicy: DEFERRED_EXPLICIT
+  repositoryClass: UserBundle\Repository\GroupDoctrine
 
   id:
     id:
       type: integer
       generator:
         strategy: AUTO
+
+  manyToMany:
+    users:
+      targetEntity: UserBundle\Model\User
+      mappedBy: groups

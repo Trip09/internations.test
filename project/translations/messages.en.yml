@@ -1,3 +1,4 @@
 action_delete: Delete
 action_edit: Edit
 action_show: Show
+flash_delete_group_not_empty: The group '%name%' is not empty. Please change Users to another group before continue.

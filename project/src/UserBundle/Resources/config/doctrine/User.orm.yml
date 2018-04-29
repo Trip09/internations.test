@@ -2,7 +2,6 @@ UserBundle\Model\User:
   table: users
   type:  entity
   changeTrackingPolicy: DEFERRED_EXPLICIT
-  repositoryClass: UserBundle\Repository\UserDoctrine
 
   id:
     id:
@@ -13,6 +12,7 @@ UserBundle\Model\User:
   manyToMany:
     groups:
       targetEntity: UserBundle\Model\Group
+      inversedBy: users
       joinTable:
         name: user_group_relation
         joinColumns:

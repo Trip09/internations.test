@@ -26,11 +26,6 @@ class User extends BaseUser implements BaseUserInterface, Entity
      */
     protected $email;
 
-    public function __construct()
-    {
-        parent::__construct();
-    }
-
     /**
      * Get id
      *

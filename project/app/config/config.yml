@@ -1,12 +1,14 @@
 imports:
   - { resource: parameters/parameters_base.yml }
+  - { resource: bundles/framework.yml }
+  - { resource: bundles/sensio_framework.yml }
   - { resource: bundles/sonata_admin.yml }
   - { resource: bundles/sonata_block.yml }
   - { resource: bundles/sonata_user.yml }
-  - { resource: bundles/fos_user.yml }
-  - { resource: bundles/framework.yml }
-  - { resource: bundles/sensio_framework.yml }
   - { resource: bundles/stof.yml }
+  - { resource: bundles/jms.yml }
+  - { resource: bundles/fos_rest.yml }
+  - { resource: bundles/fos_user.yml }
   - { resource: security.yml }
 
 # Twig Configuration

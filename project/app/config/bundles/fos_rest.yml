@@ -1,9 +1,18 @@
 fos_rest:
+  routing_loader:
+    default_format: json
+    include_format: false
   param_fetcher_listener: true
   body_listener:          true
   format_listener:        true
   view:
     view_response_listener: force
+    formats:
+      rss: false
+      xml: false
+      json: true
   body_converter:
     enabled: true
     validate: true
+  exception:
+      enabled: true

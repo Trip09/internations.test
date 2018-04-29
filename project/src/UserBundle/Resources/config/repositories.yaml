@@ -1,0 +1,6 @@
+services:
+  group.repository:
+    class: UserBundle\Repository\GroupDoctrine
+    factory: ["@doctrine.orm.default_entity_manager", getRepository]
+    arguments:
+      - UserBundle\Model\Group

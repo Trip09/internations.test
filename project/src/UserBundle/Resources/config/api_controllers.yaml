@@ -1,0 +1,8 @@
+services:
+  sonata.user.controller.api.group:
+    class: UserBundle\Controller\Api\GroupController
+    arguments:
+      - "@sonata.user.orm.group_manager"
+      - "@form.factory"
+      - "@group.repository"
+      - "@jms_serializer"
